@@ -1,0 +1,18 @@
+@import '../styles/helpers/variables';
+@import '../styles/base/fonts';
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    row-gap: 0.2em;
+    height: 100%;
+    // grid-template-rows: repeat(12, minmax(0, 1fr));
+    // margin-top: 1.7em;
+}
+
+@media (max-width: 991.98px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: calc($mainnav-height + $secondnav-width)  1fr;
+    }
+}

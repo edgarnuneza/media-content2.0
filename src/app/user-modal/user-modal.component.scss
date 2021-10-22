@@ -1,0 +1,152 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/base/fonts';
+
+$primaryColor: rgb(28, 142, 249);
+$hoverColor: rgb(4, 105, 201);
+
+:host {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.close-icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 22px;
+    cursor: pointer;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2em 3em 2.5em;
+    width: 43%;
+    max-width: 650px;
+
+    label {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+.input-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3em;
+    }
+}
+
+.btn-primary {
+    background-color: $primaryColor;
+    color: white;
+}
+
+.btn {
+    border: none;
+    grid-column: 1/3;
+    margin-top: 1.5em;
+    padding: 0.8em 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: $hoverColor;
+}
+
+.inp {
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 2px;
+    padding: 0.8em 1em;
+    width: 98%;
+}
+
+.register {
+    margin: 0 auto;
+    margin-top: 0.7em;
+    text-align: center;
+}
+
+select {
+    text-overflow: ellipsis;
+    overflow-y: hidden;
+}
+
+@media (max-width: 1199.98px) {
+    .main-content {
+        width: 50%;
+    }
+
+    label {
+        font-size: 0.8em;
+    }
+
+    .inp {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .input-content {
+        grid-template-columns: 1fr;
+
+        div {
+        margin-top: 0.5em;
+        }
+    }
+
+    .btn {
+        grid-column: 1/1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .main-content {
+        width: 75%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-content {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+@media (max-height: 729px) and (max-width: 991.98px) {
+    :host {
+        display: block;
+        overflow-y: scroll;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        border-radius: 0px;
+    }
+}

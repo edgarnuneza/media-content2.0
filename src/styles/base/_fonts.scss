@@ -1,0 +1,17 @@
+.title1 {
+    font-size: 1.5rem;
+}
+
+.main-font {
+    font-size: 1.1rem;
+}
+
+.font-2 {
+    font-size: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .main-font {
+        font-size: 0.8em;
+    }
+}

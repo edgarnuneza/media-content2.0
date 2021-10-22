@@ -1,0 +1,74 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/base/fonts';
+
+$primaryColor: rgb(28, 142, 249);
+$hoverColor: rgb(4, 105, 201);
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.login-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2.5em 4em;
+    width: 30%;
+    max-width: 500px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.3em;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+}
+
+.btn-primary {
+    background-color: $primaryColor;
+    color: white;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 0.8em 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: $hoverColor;
+}
+
+.inp {
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 2px;
+    padding: 0.8em 1em;
+}
+
+.register {
+    margin: 0 auto;
+    margin-top: 0.7em;
+    text-align: center;
+}
+
+button {
+    background-color: red;
+}

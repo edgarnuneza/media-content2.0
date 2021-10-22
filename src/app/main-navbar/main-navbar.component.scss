@@ -1,0 +1,71 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/base/fonts';
+
+
+
+:host {
+  grid-column: 1;
+  display: block;
+  color: $textColor;
+  margin-top: $secondnav-width;
+  background-color: $primaryColor;
+}
+
+.list-options {
+  margin: 0 auto;
+  height: 100%;
+  background-color: $primaryColor;
+}
+
+.navbar-option {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  margin-right: 1em;
+  border-radius: 0 20px 20px 0;
+  &:hover {
+    background-color: $hoverFocusColor;
+  }
+}
+
+.selected {
+  background-color: $secondaryColor;
+  color: $textFocus;
+}
+
+.collapsible {
+  display: none;
+}
+
+.hide {
+    display: none;
+    overflow: hidden;
+}
+
+div {
+  background-color: rgb(101, 150, 243);
+}
+
+img {
+  height: $mainnav-height;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  .list-options {
+    display: none;
+    position: fixed;
+    top: $mainnav-height + $secondnav-width;
+    width: 100%;
+  }
+
+  .collapsible {
+    display: block;
+  }
+
+}
+
+.show {
+  display: block;
+  
+}

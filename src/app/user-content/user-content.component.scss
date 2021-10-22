@@ -1,0 +1,219 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/base/fonts';
+@import '../../styles/base/general';
+
+$backgroundColor: rgb(247, 247, 247);
+$contentWidth: 97%;
+
+:host {
+  display: block;
+  background-color: $backgroundColor;
+  margin-top: $secondnav-width;
+  overflow-y: scroll;
+}
+
+.header {
+  width: $contentWidth;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-between;
+  .title1 {
+    display: inline-block;
+  }
+}
+
+.btn {
+  background-color: $textFocus;
+  border-radius: 5px;
+  color: white;
+}
+
+.user-list {
+  box-sizing: border-box;
+  padding: 1.3rem 1rem 0.8rem 1.5rem;
+  background-color: $primaryColor;
+  width: $contentWidth;
+  margin: 0 auto;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.col-title {
+  margin-bottom: 1em;
+}
+
+.column-name {
+  color: rgb(167, 167, 167);
+  font-weight: bold;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(119, 118, 136);
+  margin-bottom: 0.5em;
+  width: 99%;
+}
+
+.user-img {
+  display: none;
+}
+
+.operation {
+  display: flex;
+  flex-direction: flex;
+  justify-content: center;
+
+  img {
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  :host {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .table-row {
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 0.5fr 0.5fr;
+  }
+
+  // .name::before {
+  //     content: "Nombre de usuario: ";
+  // }
+
+  // .table-row {
+  //     display: block;
+  // }
+}
+
+@media (max-width: 767.98px) {
+  $contentWidth: 80%;
+
+  .table-row {
+    display: block;
+    border-bottom: 1px solid gray;
+    margin-top: 0.5em;
+    padding-bottom: 0.7em;
+  }
+
+  .user-img {
+    display: flex;
+    padding: 1em;
+    box-sizing: content-box;
+    text-align: center;
+    background-color: rgb(36, 23, 105);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .username p {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    padding: 0.2em;
+  }
+
+  .name-field {
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+
+  .inf-hide {
+    display: none;
+    font-size: 1.2rem;
+  }
+
+  .header {
+    width: $contentWidth;
+  }
+
+  .user-list {
+    width: $contentWidth;
+  }
+
+  .operation {
+    align-self: center;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .table-row.titles {
+    display: none;
+  }
+
+  .value {
+    margin-bottom: 0px;
+    padding-bottom: 0.5em;
+  }
+
+  .name::before {
+    content: 'Nombre: ';
+  }
+
+  .email::before {
+    content: 'Correo: ';
+  }
+
+  .date::before {
+    content: 'Fecha de creación: ';
+  }
+
+  .privilege::before {
+    content: 'Privilegio: ';
+  }
+
+  .operation::before {
+    content: 'Operaciones: ';
+  }
+}
+
+.show {
+  display: block;
+  padding-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 575.98px) {
+  $contentWidth: 90%;
+
+  .username {
+    font-size: 0.8em;
+  }
+
+  .user-img {
+    width: 15px;
+    height: 15px;
+    font-size: 1em;
+  }
+
+  .header {
+    width: $contentWidth;
+  }
+
+  .user-list {
+    width: $contentWidth;
+  }
+
+  .inf-hide {
+      font-size: 1em;
+  }
+}
